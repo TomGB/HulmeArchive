@@ -57,17 +57,17 @@ p.acknowl{
 
 /*Navigation*/
 
-.mobile_nav{
-  display: none;
-}
-
 nav{
   display: block;
 }
 nav *{
   display: inline-block;
+  cursor: pointer
 }
 .nav_area{
+  min-height: 38px
+}
+.fixed_nav{
   border-bottom: 1px solid #003399;
   padding-left: 10px;
   padding-right: 10px;
@@ -92,9 +92,6 @@ nav>span:not(:first-child)::before {
 .sub_nav span{
   display: block;
 }
-.sub_nav.active{
-  display: block;
-}
 .mobile_menu{
   display: none;
   height: 30px;
@@ -113,7 +110,6 @@ nav>span:not(:first-child)::before {
   vertical-align: middle;
   text-transform: uppercase;
 }
-
 .sub_nav{
   display: none;
   position: absolute;
@@ -127,32 +123,125 @@ nav>span:not(:first-child)::before {
   margin-left: -10px
 }
 
-nav.mobile_nav.active{
-  display:none;
+.fixed_nav {
+    background-color: white;
+    top:0;
+    width:100%;
+    z-index:100;
 }
+
+
+.right{
+display: block;
+float: right;
+width: 498px;
+}
+.clear{
+clear: both;
+}
+.reg1{
+display: block;
+float: left;
+width: 250px;
+margin: 0px 0px 0px 0px;
+font-weight: bold;
+}
+.reg2{
+display: block;
+float: left;
+width: 249px;
+margin: 0px 0px 0px 0px;
+}
+.reg3{
+display: block;
+float: left;
+width: 249px;
+margin: 0px 0px 0px 0px;
+text-align: right;
+}
+.half_image{
+display: block;
+float: left;
+width: 50%;
+}
+.article{
+padding: 0px 15px 0px 15px;
+border-left: 1px solid #003399;
+border-right: 1px solid#003399;
+}
+
+.mobile_nav{
+  display: none;
+}
+
+.desktop_nav .sub_nav.active{
+  display: block
+}
+
 
 /*small screen*/
 
 @media (max-width: 800px) {
-  nav.mobile_nav.active{
-    display:block;
+
+  .nav_area{
+    min-height: 38px
   }
 
-  .banner_area{
-    background-size: cover;
+  .mobile_nav.active{
+    display: block;
   }
 
-  .mobile_nav{
-    display: none;
-  }
-  .desktop_nav{
-    display: none;
+  .mobile_nav .sub_nav{
+    position: relative;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 0px;
+    width: 100%;
+    margin-left: 20px
   }
 
-  .mobile_menu{
+  .mobile_nav .sub_nav.active{
     display: block
   }
 
+  .desktop_nav{
+    display: none;
+  }
+  .banner_area{
+    background-size: cover;
+  }
+  nav{
+    text-align: left;
+    display: none;
+  }
+  nav span{
+    display:block;
+    padding-left: 10px
+    cursor: pointer;
+  }
+  nav a{
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+  }
+  .mobile_menu{
+    display: inline-block;
+  }
+  .mobile_menu *{
+    display: inline-block;
+  }
+  nav.visible>span{
+    display: block;
+  }
+  nav>span::before {
+    content: ' \25AA  ';
+  }
+  .sub_nav>span::before {
+    content: ' \25AA  ';
+  }
+  .sub_nav{
+    display: none;
+  }
   .reg1, .reg2, .reg3, .right{
     display: block;
     margin: 0px 0px 0px 0px;
