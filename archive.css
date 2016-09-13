@@ -145,9 +145,14 @@ nav.mobile_nav.active{
   .mobile_nav{
     display: none;
   }
-  .deskop_nav{
+  .desktop_nav{
     display: none;
   }
+
+  .mobile_menu{
+    display: block
+  }
+
   .reg1, .reg2, .reg3, .right{
     display: block;
     margin: 0px 0px 0px 0px;
