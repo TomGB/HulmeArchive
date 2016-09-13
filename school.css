@@ -1,0 +1,162 @@
+body{
+  margin: 0px;
+  text-align:center;
+}
+
+.banner_area{
+  width: 100%;
+  background-image: url('top-background.jpg');
+  background-position: center top;
+  background-size: 200%;
+}
+.school_logo{
+  width: 100px;
+}
+.banner_area h1, .banner_area h2{
+  margin: 0px;
+  color: white;
+  text-transform: uppercase;
+}
+.banner_area h1.school_name{
+  font-size: 39px
+}
+.banner_area h2{
+  font-size: 15px
+}
+.logo_area .school_logo, .logo_area .logo_text{
+  display: inline-block;
+}
+.logo_text, .school_logo{
+  vertical-align: middle;
+}
+
+.logo_area{
+  padding: 20px;
+}
+
+nav{
+  display: block;
+}
+
+nav *{
+  display: inline-block;
+}
+
+.nav_area{
+  border-bottom: 1px solid #003399;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+nav a{
+  color: #003399;
+  text-decoration: none;
+  font-style: normal;
+  padding-top: 10px;
+  padding-bottom: 10px
+}
+nav a:hover{
+  color: #444;
+}
+nav>span:not(:first-child)::before {
+  content: ' \25AA  ';
+}
+.sub_nav>span::before {
+  content: ' \25AA  ';
+}
+
+.old_school{
+  width: 100%;
+}
+.page_content{
+  max-width: 800px;
+  text-align: left;
+  display: inline-block;
+}
+
+.page_text{
+  margin: 10px
+}
+
+.sub_nav span{
+  display: block;
+}
+
+@media (min-width: 800px) {
+
+  .sub_nav{
+    display: none;
+    position: absolute;
+    background: white;
+    border-left:1px solid #003399;
+    border-right:1px solid #003399;
+    border-bottom:1px solid #003399;
+    text-align: left;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-left: -10px
+  }
+
+  nav{
+    display: block !important;
+  }
+
+}
+
+.mobile_menu{
+  display: none;
+  height: 30px;
+  vertical-align: middle;
+  width: 100%;
+  padding-top: 6px;
+  padding-bottom: 6px
+}
+
+.mobile_menu img{
+  height: 100%;
+  vertical-align: middle;
+}
+
+.mobile_menu h3{
+  margin: 0px;
+  margin-top: 2px;
+  vertical-align: middle;
+  text-transform: uppercase;
+}
+
+@media (max-width: 800px) {
+  .banner_area{
+    background-size: cover;
+  }
+  nav{
+    text-align: left;
+    display: none;
+  }
+  nav span{
+    display:block;
+    padding-left: 10px
+  }
+  nav a{
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+  }
+  .mobile_menu{
+    display: inline-block;
+  }
+  .mobile_menu *{
+    display: inline-block;
+  }
+  nav.visible>span{
+    display: block;
+  }
+  nav>span::before {
+    content: ' \25AA  ';
+  }
+  .sub_nav>span::before {
+    content: ' \25AA  ';
+  }
+
+  .sub_nav{
+    display: none;
+  }
+}
