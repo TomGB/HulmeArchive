@@ -1,0 +1,168 @@
+/* Applies to all*/
+body{
+  background: #f8f7f3;
+	margin: 0px;
+	font-family: arial, sans-serif;
+	text-align: center;
+}
+.banner_area{
+	width: 100%;
+	background-color: #003399;
+}
+.banner_area h1{
+	margin: 0px;
+	color: white;
+	text-transform: uppercase;
+	word-spacing: 7px;
+	font-family: serif;
+	font-size: 1.8em;
+	font-style: italic;
+	padding: 10px;
+}
+.school_pic{
+  width: 100%;
+}
+.full_image{
+  width: 100%;
+}
+.page_content{
+  max-width: 800px;
+  text-align: left;
+  display: inline-block;
+}
+.page_content a:link, .page_content a:visited, .page_content a:hover, .page_content a:active {
+  color: #003399;
+  text-decoration: underline;
+}
+.page_text{
+  margin: 10px;
+}
+.page_text h3{
+  font-size: 1.6em;
+  font-weight: bold;
+  color: #003399;
+  text-align: center;
+  text-decoration: underline;
+}
+.page_text p{
+  font-size: 1em;
+}
+p.acknowl{
+  font-size: 0.8em;
+  font-style: italic;
+  margin-top: 1.5em;
+  margin-bottom: 2em;
+}
+
+
+/*Navigation*/
+
+.mobile_nav{
+  display: none;
+}
+
+nav{
+  display: block;
+}
+nav *{
+  display: inline-block;
+}
+.nav_area{
+  border-bottom: 1px solid #003399;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+nav a{
+  color: #003399;
+  text-decoration: none;
+  font-size: .9em;
+  font-style: normal;
+  padding-top: 10px;
+  padding-bottom: 10px
+}
+nav a:hover{
+  color: #444;
+}
+nav>span:not(:first-child)::before {
+  content: ' \25AA  ';
+}
+.sub_nav>span::before {
+  content: ' \25AA  ';
+}
+.sub_nav span{
+  display: block;
+}
+.sub_nav.active{
+  display: block;
+}
+.mobile_menu{
+  display: none;
+  height: 30px;
+  vertical-align: middle;
+  width: 100%;
+  padding-top: 6px;
+  padding-bottom: 6px
+}
+.mobile_menu img{
+  height: 100%;
+  vertical-align: middle;
+}
+.mobile_menu h3{
+  margin: 0px;
+  margin-top: 2px;
+  vertical-align: middle;
+  text-transform: uppercase;
+}
+
+.sub_nav{
+  display: none;
+  position: absolute;
+  background: white;
+  border-left:1px solid #003399;
+  border-right:1px solid #003399;
+  border-bottom:1px solid #003399;
+  text-align: left;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-left: -10px
+}
+
+nav.mobile_nav.active{
+  display:none;
+}
+
+/*small screen*/
+
+@media (max-width: 800px) {
+  nav.mobile_nav.active{
+    display:block;
+  }
+
+  .banner_area{
+    background-size: cover;
+  }
+
+  .mobile_nav{
+    display: none;
+  }
+  .deskop_nav{
+    display: none;
+  }
+  .reg1, .reg2, .reg3, .right{
+    display: block;
+    margin: 0px 0px 0px 0px;
+  }
+  .reg1{
+    font-weight: bold;
+    padding-bottom: 10px;
+  }
+  .half_image{
+  display: block;
+  float: left;
+  width: 100%;
+  }
+  .article{
+  padding: 0px;
+  border: none;
+  }
+}
